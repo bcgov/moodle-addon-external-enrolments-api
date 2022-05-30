@@ -1,0 +1,9 @@
+- Initial user creation if doesn't already exist
+- Utilize CDATA API(?) to synchronize enrolment data with Moodle External Enrolments function
+  - Enrol and unenrol events
+  - Determine appropriate data model
+    - ELM wipes CDATA endpoint every N minutes and re-populates with just current enrols, simply removing unenrols
+    - ELM posts each event to CDATA with a timestamp, and plugin handles logic of unenrol  
+  - As close to real-time as is practical with a 1 hour maximum
+- Enrol and unenrol events send email to learner just like manual enrolment
+- Course completion posts completion data back to CDATA (Trigger plugin?)
